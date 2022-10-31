@@ -39,23 +39,26 @@
 			// lblInfo
 			// 
 			this.lblInfo.AutoSize = true;
-			this.lblInfo.Location = new System.Drawing.Point(337, 36);
+			this.lblInfo.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.lblInfo.Location = new System.Drawing.Point(219, 35);
 			this.lblInfo.Name = "lblInfo";
-			this.lblInfo.Size = new System.Drawing.Size(53, 12);
+			this.lblInfo.Size = new System.Drawing.Size(55, 16);
 			this.lblInfo.TabIndex = 11;
 			this.lblInfo.Text = "猜測記錄";
 			// 
 			// txtNumberRecord
 			// 
-			this.txtNumberRecord.Location = new System.Drawing.Point(229, 56);
+			this.txtNumberRecord.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+			this.txtNumberRecord.Location = new System.Drawing.Point(222, 54);
 			this.txtNumberRecord.Multiline = true;
 			this.txtNumberRecord.Name = "txtNumberRecord";
 			this.txtNumberRecord.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtNumberRecord.Size = new System.Drawing.Size(164, 203);
+			this.txtNumberRecord.Size = new System.Drawing.Size(216, 203);
 			this.txtNumberRecord.TabIndex = 10;
 			// 
 			// btnNewGame
 			// 
+			this.btnNewGame.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.btnNewGame.Location = new System.Drawing.Point(22, 25);
 			this.btnNewGame.Name = "btnNewGame";
 			this.btnNewGame.Size = new System.Drawing.Size(75, 23);
@@ -67,11 +70,12 @@
 			// lblResult
 			// 
 			this.lblResult.AutoSize = true;
+			this.lblResult.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.lblResult.Location = new System.Drawing.Point(20, 96);
 			this.lblResult.Name = "lblResult";
-			this.lblResult.Size = new System.Drawing.Size(42, 12);
+			this.lblResult.Size = new System.Drawing.Size(127, 16);
 			this.lblResult.TabIndex = 8;
-			this.lblResult.Text = "lblresult";
+			this.lblResult.Text = "按下新遊戲，開始遊戲";
 			this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// txtGuess
@@ -84,6 +88,7 @@
 			// 
 			// btnGuess
 			// 
+			this.btnGuess.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
 			this.btnGuess.Location = new System.Drawing.Point(128, 54);
 			this.btnGuess.Name = "btnGuess";
 			this.btnGuess.Size = new System.Drawing.Size(75, 23);
@@ -96,7 +101,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(414, 283);
+			this.ClientSize = new System.Drawing.Size(450, 283);
 			this.Controls.Add(this.lblInfo);
 			this.Controls.Add(this.txtNumberRecord);
 			this.Controls.Add(this.btnNewGame);
@@ -104,7 +109,7 @@
 			this.Controls.Add(this.txtGuess);
 			this.Controls.Add(this.btnGuess);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "1A2B Game";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

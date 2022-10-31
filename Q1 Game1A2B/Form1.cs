@@ -19,19 +19,20 @@ namespace Q1_Game1A2B
 		{
 			InitializeComponent();
 			game = new GuessNumber();	
-			lblResult.Text = string.Empty;
 		}
 
 		private void btnNewGame_Click(object sender, EventArgs e)
 		{
 		    game.NewGame();
-			lblResult.Text = game.Hint;  //偷看答案用
+			txtGuess.Text = string.Empty;
+			txtNumberRecord.Text = string.Empty;	
+			lblResult.Text = "請輸入四個不同數字";
 		}
 
 		private void btnGuess_Click(object sender, EventArgs e)
 		{
 			//取得輸入數字
-			int[] guessnumber;
+			int[] guessnumber;	
 			try
 			{
 			   guessnumber = GetInput();
@@ -42,16 +43,16 @@ namespace Q1_Game1A2B
 				return;
 			}
 			//檢查答案是否正確並給出提示
-			GuessNumber guess = new GuessNumber();
-			GuessResult result = guess.Guess(guessnumber);
+			GuessResult result = game.Guess(guessnumber);
 			if (result.IsSuccess)
 			{
-				MessageBox.Show("您答對了!");
+				MessageBox.Show("恭喜您答對了!");
 			}
 			else
 			{
 				MessageBox.Show("您答錯了!");
 				lblResult.Text=result.Hint;
+				txtNumberRecord.Text += result.Hint;
 			}
 		}
 		public int[] GetInput()
@@ -82,14 +83,14 @@ namespace Q1_Game1A2B
 		{
 			Lottery lottery = new Lottery();
 			answer = lottery.GenerateRandomNumber(0, 10, 4);
+			a = 0;
+			b = 0;
 			return answer;
 		}
 		public GuessResult Guess (int[]gnum)
-		{
-			//答對了
-			if (gnum == answer) { return GuessResult.Success(); }
+		{    a = 0;
+			 b = 0;
 			//答錯了
-			//1.位置和數字都一樣
 			for (int i = 0; i < answer.Length; i++)
 			{
 				if (gnum[i] == answer[i])
@@ -100,14 +101,15 @@ namespace Q1_Game1A2B
 				{
 					b++;
 				}
+				if (a==4) { return GuessResult.Success(); }
 			}
-			return GuessResult.Failed(this.Hint);
+			return GuessResult.Failed(Hint(gnum));
 		}
-		public string Hint 
+		public string Hint(int[]gnum) 
 		{
-			get { return $"{a}a{b - a}b, anwser = {string.Join(string.Empty, answer)}"; }
+			return $"{a.ToString()}A{b.ToString()}B,guessnumber={string.Join(string.Empty, gnum)}\r\n";
 		}
-	}
+		}
 	}
 	public class GuessResult 
 	{
