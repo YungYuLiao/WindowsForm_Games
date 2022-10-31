@@ -25,11 +25,11 @@ namespace Game.Utility
 				original[i] = i;
 			}
 			//2.洗牌
-			int seed = Guid.NewGuid().GetHashCode();
-			var random = new Random(seed);
-			int position = random.Next(1,totalnumber);	//和哪個位子換數字
 			for (int i = startnumber; i < original.Length; i++)
 			{
+				int seed = Guid.NewGuid().GetHashCode();
+				var random = new Random(seed);
+				int position = random.Next(1, totalnumber); //和哪個位子換數字
 				int temp;
 				temp = original[i];
 				original[i] = original[position];	

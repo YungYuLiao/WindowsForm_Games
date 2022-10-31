@@ -107,7 +107,7 @@ namespace Q1_Game1A2B
 		}
 		public string Hint(int[]gnum) 
 		{
-			return $"{a.ToString()}A{b.ToString()}B,guessnumber={string.Join(string.Empty, gnum)}\r\n";
+			return $"{a.ToString()}A{b.ToString()}B,guessnumber={string.Join(string.Empty, gnum)}\r\n}";
 		}
 		}
 	}

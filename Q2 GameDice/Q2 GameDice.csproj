@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Game.Utility\Game.Utility.csproj">
+      <Project>{2ca7ac61-2db5-4a5a-ab04-f849bb2666d4}</Project>
+      <Name>Game.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

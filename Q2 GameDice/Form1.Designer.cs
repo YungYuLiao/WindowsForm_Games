@@ -41,6 +41,7 @@
 			this.btnDice.TabIndex = 0;
 			this.btnDice.Text = "擲骰子";
 			this.btnDice.UseVisualStyleBackColor = true;
+			this.btnDice.Click += new System.EventHandler(this.btnDice_Click);
 			// 
 			// lblDiceNumber
 			// 
