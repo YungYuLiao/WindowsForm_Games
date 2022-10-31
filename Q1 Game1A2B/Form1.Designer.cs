@@ -108,6 +108,9 @@
 			this.Controls.Add(this.lblResult);
 			this.Controls.Add(this.txtGuess);
 			this.Controls.Add(this.btnGuess);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Form1";
 			this.Text = "1A2B Game";
 			this.ResumeLayout(false);
