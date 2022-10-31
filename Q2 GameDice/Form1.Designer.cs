@@ -74,6 +74,9 @@
 			this.Controls.Add(this.lblResult);
 			this.Controls.Add(this.lblDiceNumber1);
 			this.Controls.Add(this.btnDice);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Form1";
 			this.Text = "擲骰子遊戲";
 			this.ResumeLayout(false);
