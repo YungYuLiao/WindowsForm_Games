@@ -82,7 +82,7 @@ namespace Q1_Game1A2B
 		public int[] NewGame()
 		{
 			Lottery lottery = new Lottery();
-			answer = lottery.GenerateRandomNumber(0, 10, 4);
+			answer = lottery.GenerateRandomNumber(0,10, 4);
 			a = 0;
 			b = 0;
 			return answer;
@@ -107,7 +107,7 @@ namespace Q1_Game1A2B
 		}
 		public string Hint(int[]gnum) 
 		{
-			return $"{a.ToString()}A{b.ToString()}B,guessnumber={string.Join(string.Empty, gnum)}\r\n}";
+			return $"{a.ToString()}A{b.ToString()}B,guessnumber={string.Join(string.Empty, gnum)}\r\n";
 		}
 		}
 	}

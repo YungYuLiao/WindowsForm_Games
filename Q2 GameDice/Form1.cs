@@ -22,17 +22,46 @@ namespace Q2_GameDice
 
 		private void btnDice_Click(object sender, EventArgs e)
 		{
-
+			int [] dicenumber = game.NewGame();
+			lblDiceNumber1.Text = string.Join(string.Empty, dicenumber);
+			int? result = game.Result;
+			if (result.HasValue) { lblResult.Text = result.ToString(); }
+			else {lblResult.Text = "請繼續投擲，\r\n直到有重複數字為止"; }
 		}
 	}
 	public class DiceNumber 
 	{
-		private int[] answer;
+		private int[] number;
 		public int[] NewGame()
 		{
 			Lottery lottery = new Lottery();
-			answer = lottery.GenerateRandomNumber(0, 10, 4);
-			return answer;
+			number = lottery.GenerateRandomDice(1,6, 4);
+			return number;
 		}
+		public int? Result 
+		{
+			get
+			{
+				Array.Sort(number);
+				int? result;
+				if (number[0] == number[1])
+				{
+					result = number[2] + number[3];
+					return result;
+				}
+				else if (number[1] == number[2])
+				{
+					result = number[0] + number[3];
+					return result;
+				}
+				else if (number[2] == number[3])
+				{
+					result = number[0] + number[1];
+					return result;
+				}
+				return null;
+			}
+		}
+
 	}
 }

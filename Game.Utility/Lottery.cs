@@ -12,24 +12,25 @@ namespace Game.Utility
 		/// <summary>
 		/// 取亂數(洗牌法)
 		/// </summary>
-		/// <param name="number">要取的數字範圍</param>
-		/// <param name="targetnumber">要取的數字數量</param>
+		/// <param name="startnumber">開始數字</param>
+		/// <param name="totalnumber">結束數字</param>
+		/// <param name="targetnumber">要取幾個數字</param>
 		/// <returns></returns>
-		
+
 		public int[] GenerateRandomNumber(int startnumber, int totalnumber, int targetnumber)
         {
 			//1.產生一原始陣列
 			int[] original = new int[totalnumber];
-			for (int i = startnumber; i < original.Length; i++) 
+			for (int i = 0; i < original.Length; i++) 
 			{
 				original[i] = i;
 			}
 			//2.洗牌
-			for (int i = startnumber; i < original.Length; i++)
+			for (int i = 0; i < original.Length; i++)
 			{
 				int seed = Guid.NewGuid().GetHashCode();
 				var random = new Random(seed);
-				int position = random.Next(1, totalnumber); //和哪個位子換數字
+				int position = random.Next(startnumber, totalnumber); //和哪個位子換數字
 				int temp;
 				temp = original[i];
 				original[i] = original[position];	
@@ -40,7 +41,27 @@ namespace Game.Utility
 			Array.Copy(original, result, targetnumber);
 			return result;
 		}
-    }
+		/// <summary>
+		/// 取亂數(洗牌法)
+		/// </summary>
+		/// <param name="startnumber">結束數字</param>
+		/// <param name="totalnumber">結束數字</param>
+		/// <param name="targetnumber">要取幾個數字</param>
+		/// <returns></returns>
+		public int[] GenerateRandomDice(int startnumber,int totalnumber,int targetnumber)
+		{
+
+			int[] result = new int[targetnumber];
+			for (int i = 0; i < targetnumber ; i++)
+			{
+				int seed = Guid.NewGuid().GetHashCode();
+				var random = new Random(seed);
+				int number = random.Next(1, totalnumber+1);
+				result[i] = number;	
+			}
+			return result;
+		}
+	}
 	public class NumberRepeat
 	{
 		/// <summary>
