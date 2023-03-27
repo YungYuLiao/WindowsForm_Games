@@ -1,6 +1,6 @@
 # 2款簡易小遊戲(1A2B 及 擲骰子遊戲)
 
-**初學windowsform及OOP練習**  
+**Keyword: 初學windowsform及OOP練習**  
 
 1. 撰寫Game.Utility.dll，將會重複使用到的方法寫成動態連結函式庫  
 2. 兩款小遊戲取亂數皆是以Guid的雜湊碼作為random的種子值，再用洗牌演算法(交換法)產生隨機亂數
