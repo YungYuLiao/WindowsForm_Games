@@ -16,7 +16,7 @@ namespace Q1_Game1A2B
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1());
+			Application.Run(new Game1A2B());
 		}
 	}
 }

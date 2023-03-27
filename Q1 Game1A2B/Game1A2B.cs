@@ -12,13 +12,14 @@ using System.Windows.Forms;
 
 namespace Q1_Game1A2B
 {
-	public partial class Form1 : Form
+	public partial class Game1A2B : Form
 	{
 		private GuessNumber game;
-		public Form1()
+		public Game1A2B()
 		{
 			InitializeComponent();
-			game = new GuessNumber();	
+			game = new GuessNumber();
+			btnGuess.Enabled = false;
 		}
 
 		private void btnNewGame_Click(object sender, EventArgs e)
@@ -27,10 +28,13 @@ namespace Q1_Game1A2B
 			txtGuess.Text = string.Empty;
 			txtNumberRecord.Text = string.Empty;	
 			lblResult.Text = "請輸入四個不同數字";
+			btnGuess.Enabled = true;
 		}
 
 		private void btnGuess_Click(object sender, EventArgs e)
 		{
+			
+			
 			//取得輸入數字
 			int[] guessnumber;	
 			try

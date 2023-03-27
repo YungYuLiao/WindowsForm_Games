@@ -71,17 +71,16 @@ namespace Game.Utility
 		/// <returns></returns>
 		public bool IsRepeatOrNot(int[] items)
 		{
-			Hashtable ht = new Hashtable(); //利用雜湊表判斷
+			Dictionary<int, int> dict = new Dictionary<int, int>();
 			for (int i = 0; i < items.Length; i++)
 			{
-				if (ht.Contains(items[i]))
+				if (dict.ContainsKey(items[i]))
 				{
-
 					return true;
 				}
 				else
 				{
-					ht.Add(items[i], items[i]); //沒有的話建檔且不改變isReapet
+					dict.Add(items[i], items[i]);
 				}
 			}
 			return false;

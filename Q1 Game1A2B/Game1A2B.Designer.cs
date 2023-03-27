@@ -1,6 +1,6 @@
 ﻿namespace Q1_Game1A2B
 {
-	partial class Form1
+	partial class Game1A2B
 	{
 		/// <summary>
 		/// 設計工具所需的變數。

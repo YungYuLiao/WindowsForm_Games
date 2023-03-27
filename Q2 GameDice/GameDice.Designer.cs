@@ -1,6 +1,6 @@
 ﻿namespace Q2_GameDice
 {
-	partial class Form1
+	partial class GameDice
 	{
 		/// <summary>
 		/// 設計工具所需的變數。

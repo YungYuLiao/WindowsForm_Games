@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Q2_GameDice
 {
-	public partial class Form1 : Form
+	public partial class GameDice : Form
 	{
 		private DiceNumber game;
-		public Form1()
+		public GameDice()
 		{
 			InitializeComponent();
 			game = new DiceNumber();	
